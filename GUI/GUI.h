@@ -5,14 +5,6 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct character
-{
-	char carac;
-	struct character* suivant;
-}getcharacter;
-
-typedef getcharacter* listeCharac;
-
 int choice(char[], int, int,int);
 listeCharac ajouter(listeCharac LC, char c);
 int sumChar(listeCharac LC);
