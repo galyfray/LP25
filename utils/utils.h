@@ -1,7 +1,7 @@
 #ifndef UTILS
 #define UTILS
 
-#include <stdint.h>
+#include<stdint.h>
 #include<stdio.h> 
 #include<stdlib.h> 
 
@@ -31,5 +31,7 @@ DLLnode* DDList_find(DLList,int);
 int rangedRandom(int , int);
 
 int random(int);
+
+void pwdCreator(char*,int)
 
 #endif
