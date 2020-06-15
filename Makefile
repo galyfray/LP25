@@ -12,11 +12,11 @@ CFLAGS = -Wall -Werror -pedantic
 CDEBUGF= -g
 
 #fichier .c contenant le main et nom du programe
-TARGET = LO21.c
-MAIN = LO21
+TARGET = primeNumberGenerator.c
+MAIN = main
 
 #liste des fichiers .c qui serons transformer en .o
-OSRCS= ./bits/bits.c ./individu/individu.c ./pop/pop.c ./pop/quick.c ./individu/random.c
+OSRCS= linkedList.c
 OBJS = $(OSRCS:.c=.o)
 
 #liste des fichier .c qui serons transformer en .so
@@ -73,7 +73,7 @@ wdebug: dbg all
 run: $(MAIN)
 	./$(MAIN)
 
-wrun: $(MAIN)
+wrun:
 	$(MAIN).exe
 
 

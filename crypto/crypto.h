@@ -1,5 +1,5 @@
-#ifndef rsa_h
-#define rsa_h
+#ifndef CRYPTO_H
+#define CRYPTO_H
 
 // the gcd function 
 int gcd(int, int);
@@ -24,5 +24,8 @@ int* RSAencryption(char*, int, int, int);
 // Decryption of a encrypted message with the RSA system
 char* RSAdecryption(int*, int, int, int);
 
+DLList* primeNumberGenerator(int);
 
-#endif /* rsa_h */
+int randomPrimeNumberGenerator(int rangestart,int rangeend);
+
+#endif /* CRYPTO_H */

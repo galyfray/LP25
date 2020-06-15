@@ -1,4 +1,5 @@
-#include "GUI.h"
+#include "GUI/GUI.h"
+#include "crypto/crypto.h"
 
 int main(int argc, char** argv)
 {
