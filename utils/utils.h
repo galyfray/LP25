@@ -1,7 +1,7 @@
 #ifndef UTILS
 #define UTILS
 
-#include <stdint.h>
+#include<stdint.h>
 #include<stdio.h> 
 #include<stdlib.h> 
 
@@ -35,5 +35,7 @@ int randomInt(int);
 int HexToDec(char*);
 
 char* strcut(char*,char*,int,int);
+
+void pwdCreator(char*,int)
 
 #endif
