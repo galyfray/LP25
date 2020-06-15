@@ -36,6 +36,6 @@ int HexToDec(char*);
 
 char* strcut(char*,char*,int,int);
 
-void pwdCreator(char*,int)
+void pwdCreator(char*,int);
 
 #endif
