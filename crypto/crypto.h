@@ -37,14 +37,14 @@ char* RSAdecryption(int*, int, int, int);
 
 DLList* primeNumberGenerator(int);
 
-int randomPrimeNumberGenerator(int rangestart,int rangeend);
+int floor(DLList,int);
 
-char* hasher(char* ,char* ,char* ,uint8_t ,char* );
+char* hasher(char* ,char* ,uint8_t ,char* );
 
 char* truncated_md5(char* ,uint8_t ,size_t ,char* );
 
 char* sha256(uint32_t*,uint8_t* ,uint32_t ,char* );
 
-uint8_t hashComp(char*,char*,char*,char*);
+uint8_t hashComp(char*,char*,char*);
 
 #endif /* CRYPTO_H */

@@ -38,10 +38,3 @@ int floor(DLList list,int value){
     return index;
 }
 
-int randomPrimeNumberGenerator(int rangestart,int rangeend){
-    DLList* numbers = primeNumberGenerator(rangeend);
-    int l = DLList_Length(*numbers),s=floor(*numbers,rangestart);
-    int n = rangedRandom(s,l);
-    return *(int*)(DLList_find(*numbers,n)->value);
-}
-

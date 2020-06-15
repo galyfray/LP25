@@ -3,9 +3,9 @@
 
 
 
-char* hasher(char* password,char*userName,char* userType,uint8_t offset,char*hashOutput)
+char* hasher(char* password,char*userName,uint8_t offset,char*hashOutput)
 {
-    size_t passLenth=strlen(password),Hl=passLenth+SHLenth+strlen(userType);
+    size_t passLenth=strlen(password),Hl=passLenth+SHLenth;
     uint8_t offsetM=offset%passLenth; /**< offsetM et forcément plus petit que la longueur de MdP et assure la découpe de celui-ci*/
     char hashOffset[FHLenth],hashP1[(passLenth+abs(passLenth-2*(offsetM)))/2 +1 /**< détermine le max entre passLent-(offsetM) et offsetM */];
     char Thash[Hl];//contiendra la chaine a hacher;
@@ -19,12 +19,11 @@ char* hasher(char* password,char*userName,char* userType,uint8_t offset,char*has
      *  3:concaténation de la partie tronquée avec le hash du nom d'utilisateur
      *  4:concaténation avec le type de l'utilisateur
      *  5:découpage du MdP afin d'en obtenir la moitié manquante
-     *  6:concaténation du tout sous la forme [MdP partie1][hash du Usrnm][UsrTp][MdP partie2]
+     *  6:concaténation du tout sous la forme [MdP partie1][hash du Usrnm][[MdP partie2]
      */
     strcut(hashP1,password,0,offsetM);
     strcpy(Thash,hashP1);
     strcat(Thash,hashOffset);
-    strcat(Thash,userType);
     strcut(hashP1,password, offsetM,passLenth);
     strcat(Thash,hashP1);
 
