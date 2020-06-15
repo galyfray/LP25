@@ -17,8 +17,6 @@ int random(int max){
 
 void pwdCreator(char* pwdOut,int length)
 {
-
-    // Seed number for rand()
     srand((unsigned int) time(0));
 
     // ASCII characters 33 to 126
