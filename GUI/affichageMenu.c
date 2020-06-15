@@ -2,7 +2,7 @@
 
 void affichageMenu(S_menu menu, int nbMenu, char* STRMENU)
 {   
-	strcat(STRMENU, "1: "); //Ecris tout d'abord le premier choix dans la chaîne de caractère et en fonction du nombre de choix ajoute les choix manquants
+	strcat(STRMENU, "1: "); //Ecrit tout d'abord le premier choix dans la chaîne de caractère et en fonction du nombre de choix ajoute les choix manquants
 	strcat(STRMENU, menu.menu1);
     	switch (nbMenu)
     	{
