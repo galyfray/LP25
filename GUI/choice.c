@@ -60,24 +60,24 @@ int choice(char T[], int nbchoix, int lignedebut,int forceNumPad/**< si !=0 alor
     while(entree != ENTREE); // 13 est ce que renvoie getch() lorsqu'on appuie sur "Entrée"
     system("cls"); // Ferme la console et en ouvre une nouvelle vierge
 	#elif __linux__
-	system("clear");
-	printf("%s", T);
-	Curseur(0,y+1);
+	printf("\033c"); // Vide la console
+	printf("%s", T); //Affiche l'interface et les différents choix
+	Curseur(0,y+1); //déplace le curseur à la première ligne de la console (qui est la ligne 1 sous Linux)
 	
 	do
 	{
-		entree = getch();
+		entree = getch(); //Une entrée de flèche est constituée de 3 caractère sous Linux avec getch()
 		if(entree == 27)
 		{
 			entree += getch();
 			if(entree == 118)
 			{
 				entree += getch();
-				if (entree == 183)
+				if (entree == 183) //si après la 3e entrée on obtient 183 on a donc la flèche du haut
 				{
 					y--;
 				}
-				if (entree == 184)
+				if (entree == 184) //si après la 3e entrée on obtient 184 on a donc la flèche du bas
 					y++;
 			}
 		}
@@ -91,7 +91,7 @@ int choice(char T[], int nbchoix, int lignedebut,int forceNumPad/**< si !=0 alor
                     entree=ENTREE;
             }
         }
-        if (y>nbchoix-1+lignedebut)
+        if (y>nbchoix-1+lignedebut) //Permet de ne pas déplacer le curseur si la ligne de destination ne correspond pas à un choix
         {
             y=nbchoix-1+lignedebut;
         }
@@ -102,7 +102,7 @@ int choice(char T[], int nbchoix, int lignedebut,int forceNumPad/**< si !=0 alor
         Curseur(0,y+1); // Déplacement du curseur avec la nouvelle valeur de y
 	}
 	while(entree != ENTREE);
-	system("clear");
+	system("clear"); //Ferme la console et en ouvre une nouvelle vierge
 	#endif
 	
     return y+1-lignedebut; // Renvoie la valeur du choix fait par l'utilisateur
