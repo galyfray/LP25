@@ -14,9 +14,9 @@ int gcd(int a, int b)
 	while(a != b)
 	{
 		if(a > b) a = a - b;
-	    else b -= a;
+	    	else b -= a;
 	}
-    return a;
+	return a;
 }
 
 /*************************************************************************************************/
@@ -69,7 +69,7 @@ void privateKeyGenerator(int* privateKeyExponent, int publicKeyExponent, int pri
 {
 	int phiOfKeyModulus = (primeNumber1-1)*(primeNumber2-1);
 	// The private Key Exponent is the inverse of the public Key Exponent modulus phiOfKeyModulus
-    *privateKeyExponent = ModularMultiplicativeInverse(publicKeyExponent,phiOfKeyModulus);
+    	*privateKeyExponent = ModularMultiplicativeInverse(publicKeyExponent,phiOfKeyModulus);
 }
 
 /*************************************************************************************************/
