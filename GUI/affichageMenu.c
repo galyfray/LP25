@@ -2,7 +2,7 @@
 
 void affichageMenu(S_menu menu, int nbMenu, char* STRMENU)
 {   
-	strcat(STRMENU, "1: ");
+	strcat(STRMENU, "1: "); //Ecris tout d'abord le premier choix dans la chaîne de caractère et en fonction du nombre de choix ajoute les choix manquants
 	strcat(STRMENU, menu.menu1);
     	switch (nbMenu)
     	{
@@ -50,8 +50,8 @@ int afficherGUI(int numeroMenu, S_menu* menus, int nbChoix)
 {
 	char STRMENU[600];
 	int choix;
-	affichageMenu(menus[numeroMenu], nbChoix, STRMENU);
-	choix = choice(STRMENU, nbChoix, 0, 0);
-	strcpy(STRMENU, "");
+	affichageMenu(menus[numeroMenu], nbChoix, STRMENU); //Transforme le Menu en chaîne de caractère formatée
+	choix = choice(STRMENU, nbChoix, 0, 0); //Affiche l'interface à partir de la chaîne de caractère et du nombres de choix pour permettre un choix
+	strcpy(STRMENU, ""); //Vide la chaîne de caractères
 	return choix;
 }
