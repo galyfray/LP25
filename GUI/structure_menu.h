@@ -1,7 +1,7 @@
 #ifndef STRUCTURE_MENU_H_INCLUDED
 #define STRUCTURE_MENU_H_INCLUDED
 
-typedef struct S_menu S_menu;
+typedef struct S_menu S_menu; //Définition d'une structure pour stocker les menus après le démarrage du code
 struct S_menu
 {
     char menu1[30];

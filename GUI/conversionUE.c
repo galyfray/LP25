@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void conversionUE(char information[]){
+void conversionUE(char information[]){ //transforme les underscores d'une chaîne de caractères en espaces
 
     int i=0;
 
