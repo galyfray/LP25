@@ -38,7 +38,7 @@ char* RSAdecryption(int*, int, int, int);
 
 DLList* primeNumberGenerator(int);
 
-int floor(DLList,int);
+int DLL_floor(DLList,int);
 
 char* hasher(char* ,char* ,uint8_t ,char* );
 

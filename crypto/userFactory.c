@@ -20,18 +20,20 @@ user* userFactory(char* userName,char*pwd){
     
     DLL_Free(numbers);
     
-    int l=DLList_Length(*sub);
+    int l=DLList_Length(sub);
     
     int n1=maj(H[1],H[2],H[0])%l,n2=ch(H[6],H[7],H[5])%l;
     
-    n1=*(int*)DLList_find(*sub,n1)->data;
-    n2=*(int*)DLList_find(*sub,n2)->data;
+    n1=DLList_find(sub,n1);
+    n2=DLList_find(sub,n2)
     
     publicKeyGenerator(&(uuser->publicModulo), &(uuser->publicExponent), n1, n2);
     
     privateKeyGenerator(&(uuser->privateExponent), (uuser->publicExponent), n1, n2);
     
-    memcpy(uuser->userName,userName,USERNAME_LENGTH);
+    uuser->userName=(char*)malloc(USERNAME_LENGTH);
+    
+    void * memcpy(uuser->userName,userName,USERNAME_LENGTH);
     
     DLL_Free(sub);
     return uuser;

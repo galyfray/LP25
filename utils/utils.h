@@ -26,7 +26,11 @@ void printList(DLList, void (*fptr)(void *));
 
 int DLList_Length(DLList);
 
-DLNode* DDList_find(DLList,int);
+DLNode* DLList_find(DLList,int);
+
+void DLL_Free(DLList*);
+
+DLList* DLList_subset(DLList,int,int);
 
 int rangedRandom(int , int);
 

@@ -1,5 +1,4 @@
-#include"../utils/utils.h"
-
+#include "crypto.h"
 #include <time.h>
 
 DLList* primeNumberGenerator(int max){
@@ -27,11 +26,10 @@ DLList* primeNumberGenerator(int max){
     
 }
 
-int floor(DLList list,int value){
-    if(list == NULL){return -1;}
+int DLL_floor(DLList list,int value){
     int index=0;
     DLNode* node = list.head;
-    while( node != NULL && *(int*)node.value < value ){
+    while( node != NULL && *(int*)node->data < value ){
         index++;
         node=node->next;
     }

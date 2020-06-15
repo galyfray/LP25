@@ -1,10 +1,10 @@
 #ifndef USER_H
 #define USER_H
 
-#define USERNAME_LENGTH 25;
-#define PWD_LENGTH 64;
+#define USERNAME_LENGTH 25
+#define PWD_LENGTH 64
 
-#include "../crypto/crypto.c"
+#include "../crypto/crypto.h"
 #include <stdio.h>
 
 typedef struct S_user {

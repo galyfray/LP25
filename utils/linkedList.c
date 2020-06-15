@@ -72,7 +72,7 @@ DLLnode* DDList_find(DLList list,int index){
     return node;
 }
 
-DLList* subset(DLList oldList,int from,int to){
+DLList* DLList_subset(DLList oldList,int from,int to){
     int l=0;
     DLNode * node = oldList.head;
     DLList * nList;
