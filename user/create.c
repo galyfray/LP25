@@ -10,6 +10,8 @@ user* create(){
     
     printf("genrating keys ...");
     
-    user* uuser=userfactory;
+    user* uuser=userfactory(username,pwd);
+    
+    return uuser;
     
 }
