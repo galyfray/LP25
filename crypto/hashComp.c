@@ -1,5 +1,5 @@
 #include "crypto.h"
-#include "../utils/utils.h"
+
 
 uint8_t hashComp(char* hashStored,char*userName,char*password)
 {

@@ -7,6 +7,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <math.h>
+#include "../utils/utils.h"
 
 //longueur des Hash produit pas les fonctions de hash \0 compris
 #define FHLenth 67 // hash produit par hasher
