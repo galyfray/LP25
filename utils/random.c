@@ -18,10 +18,10 @@ int random(int max){
 void pwdCreator(char* pwdOut,int length)
 {
 
-    /* Seed number for rand() */
+    // Seed number for rand()
     srand((unsigned int) time(0));
 
-    /* ASCII characters 33 to 126 */
+    // ASCII characters 33 to 126
     for(int i = 0; i < length-1; i++)
     {
     	pwdOut[i] = rand()%94+33;
