@@ -9,8 +9,8 @@
 #include <math.h>
 
 //longueur des Hash produit pas les fonctions de hash \0 compris
-#define FHLenth 67 // hash produit par hashMain
-#define SHLenth 9  //hash produit par hashA
+#define FHLenth 67 // hash produit par hasher
+#define SHLenth 9  // hash produit par truncated_md5
 
 // the gcd function 
 int gcd(int, int);

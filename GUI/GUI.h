@@ -6,6 +6,7 @@
 #include <string.h>
 #include "structure_menu.h"
 
+int strentry(char*, int);
 int choice(char[], int, int,int);
 void buffer();
 void conversionUE (char []);
