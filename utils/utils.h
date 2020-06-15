@@ -26,10 +26,14 @@ void printList(DLList, void (*fptr)(void *));
 
 int DLList_Length(DLList);
 
-DLLnode* DDList_find(DLList,int);
+DLNode* DDList_find(DLList,int);
 
 int rangedRandom(int , int);
 
-int random(int);
+int randomInt(int);
+
+int HexToDec(char*);
+
+char* strcut(char*,char*,int,int);
 
 #endif

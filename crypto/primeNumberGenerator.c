@@ -1,6 +1,5 @@
-#include"utils/utils.h"
+#include"../utils/utils.h"
 
-#include<math.h>
 #include <time.h>
 
 DLList* primeNumberGenerator(int max){
