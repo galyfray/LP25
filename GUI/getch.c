@@ -1,4 +1,4 @@
-#ifdef __linux__
+#ifdef __linux__ 
 #include <termios.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -30,4 +30,8 @@ int getche(void)
     tcsetattr( STDIN_FILENO, TCSANOW, &oldattr );
     return ch;
 }
+
+
 #endif
+
+typedef int make_iso_compilers_happy;

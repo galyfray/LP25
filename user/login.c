@@ -17,10 +17,10 @@ user* login(void){
     FILE * userFile;
     sprintf(path,"users/data/%s",username);
     
-    if ((userFile=fopen(path))){
+    if ((userFile=fopen(path,"r"))){
         strentry(pwd,PWD_LENGTH);
         fgets(hash,FHLenth,userFile);
-        test = hashComp(hash,userName,pwd);
+        test = hashComp(hash,username,pwd);
         if (test ==0){
             printf("Succesfully login genrating keys");
             uuser = userFactory(username,pwd);

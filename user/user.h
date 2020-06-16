@@ -5,6 +5,7 @@
 #define PWD_LENGTH 64
 
 #include "../crypto/crypto.h"
+#include "../GUI/GUI.h"
 #include <stdio.h>
 
 typedef struct S_user {
@@ -17,5 +18,7 @@ typedef struct S_user {
 user* login(void);
 
 user* userFactory(char*,char*);
+
+user* create(void);
 
 #endif /*USER_H*/
