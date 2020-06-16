@@ -9,6 +9,7 @@
 //double linked node
 typedef struct S_DLNode{
     void* data;
+    size_t size;
     struct S_DLNode* prev;
     struct S_DLNode* next;
     
