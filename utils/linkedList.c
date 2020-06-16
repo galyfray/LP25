@@ -9,6 +9,7 @@ DLList* DLL_push_tail(DLList* list,void* data,size_t datasize){
         
     DLNode * node = (DLNode *)malloc(sizeof(DLNode));
     node->data=malloc(datasize);
+    node->size=datasize;
     node->next=NULL;
     if (list->tail != NULL){
         list->tail->next= node;
@@ -81,7 +82,7 @@ DLList* DLList_subset(DLList oldList,int from,int to){
     }
     
     while (l<to && node != NULL){
-        nList= DLL_push_tail(NULL,node->data,sizeof((*node->data)));
+        nList= DLL_push_tail(NULL,node->data,node->size);
         node = node -> next;
         l++;
     }
