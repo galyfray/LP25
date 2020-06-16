@@ -19,6 +19,7 @@ int getch(void); //Permet de réaliser getch en Linux donc, sans conio.h
 int getche(void); //Permet de réaliser getche en Linux donc, sans conio.h
 #define Curseur(x,y) printf("\033[%d;%dH", (y), (x)) //Déplace le curseur sous Linux
 
+
 #elif _WIN32
 #include <conio.h>
 #include <tchar.h>

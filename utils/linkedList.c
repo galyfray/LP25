@@ -1,6 +1,6 @@
-#include"linkedList.h"
+#include"utils.h"
 
-DLList* DLL_push_tail(DLList* list,void* value,size_t valuesize){
+DLList* DLL_push_tail(DLList* list,void* data,size_t datasize){
     if (list == NULL){
         list = (DLList *)malloc(sizeof(DLList));
         list->tail=NULL;
@@ -8,7 +8,7 @@ DLList* DLL_push_tail(DLList* list,void* value,size_t valuesize){
     }    
         
     DLNode * node = (DLNode *)malloc(sizeof(DLNode));
-    node->data=malloc(valuesize);
+    node->data=malloc(datasize);
     node->next=NULL;
     if (list->tail != NULL){
         list->tail->next= node;
@@ -21,14 +21,14 @@ DLList* DLL_push_tail(DLList* list,void* value,size_t valuesize){
     }
     
     int i; 
-    for (i=0; i<valuesize; i++) 
-        ((uint8_t *)(node->data))[i] = ((uint8_t *)(value))[i];
+    for (i=0; i<datasize; i++) 
+        ((uint8_t *)(node->data))[i] = ((uint8_t *)(data))[i];
     
     return list;
 }
 
 void DLL_Free(DLList * list){
-    DLNode* node = list->head,node2=list->head->next;
+    DLNode* node = list->head, *node2=list->head->next;
 
     while(node2 !=NULL){
         free(node);
@@ -52,7 +52,6 @@ void printList(DLList list, void (*fptr)(void *)) {
 
 int DLList_Length(DLList list){
     int l=0;
-    if (list == NULL){return -1;}
     DLNode* node =list.head;
     while(node != NULL){
         l++;
@@ -61,9 +60,8 @@ int DLList_Length(DLList list){
     return l;
 }
 
-DLLnode* DDList_find(DLList list,int index){
+DLNode* DDList_find(DLList list,int index){
     int l=0;
-    if (list == NULL){return -1;}
     DLNode* node =list.head;
     while(node != NULL && l<index){
         l++;
@@ -83,11 +81,11 @@ DLList* DLList_subset(DLList oldList,int from,int to){
     }
     
     while (l<to && node != NULL){
-        nList= DLL_push_tail(NULL,node->value,sizeof(*(node->value)));
+        nList= DLL_push_tail(NULL,node->data,sizeof((*node->data)));
         node = node -> next;
         l++;
     }
     
-    return DLList;
+    return nList;
 
 }
