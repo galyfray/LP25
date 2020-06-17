@@ -24,8 +24,12 @@ user* userFactory(char* userName,char*pwd){
     
     int n1=maj(H[1],H[2],H[0])%l,n2=ch(H[6],H[7],H[5])%l;
     
-    n1=*(int*)DLList_find(*sub,n1)->data;
-    n2=*(int*)DLList_find(*sub,n2)->data;
+    DLNode *node = DLList_find(*sub,n1);
+    
+    n1=*((int*)(node->data));
+    
+    node = DLList_find(*sub,n2);
+    n2=*((int*)(node->data));
     
     publicKeyGenerator(&(uuser->publicModulo), &(uuser->publicExponent), n1, n2);
     
