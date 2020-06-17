@@ -16,7 +16,7 @@ TARGET = main.c
 MAIN = main
 
 #liste des fichiers .c qui serons transformer en .o
-OSRCS= crypto/hashComp.c crypto/hasher.c crypto/primeNumberGenerator.c crypto/rsa.c crypto/sha256.c crypto/truncated_md5.c user/userFactory.c GUI/affichageMenu.c GUI/buffer.c GUI/choice.c GUI/conversionUE.c GUI/getch.c GUI/rechercheMenu.c GUI/strentry.c user/create.c user/login.c utils/HexToDec.c utils/linkedList.c utils/random.c utils/strcut.c utils/utils.h
+OSRCS= crypto/hashComp.c crypto/hasher.c crypto/primeNumberGenerator.c crypto/rsa.c crypto/sha256.c crypto/truncated_md5.c user/userFactory.c GUI/affichageMenu.c GUI/buffer.c GUI/choice.c GUI/conversionUE.c GUI/getch.c GUI/rechercheMenu.c GUI/strentry.c user/create.c user/login.c utils/HexToDec.c utils/linkedList.c utils/random.c utils/strcut.c
 OBJS = $(OSRCS:.c=.o)
 
 #liste des fichier .c qui serons transformer en .so

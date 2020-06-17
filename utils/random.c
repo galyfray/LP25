@@ -3,10 +3,6 @@
 #include <string.h>
 #include "utils.h"
 
-int rangedRandom(int rangestart, int rangeend){
-    return randomInt(rangestart)+(rangeend-rangestart);
-}
-
 int randomInt(int max){
     static char init=0;
     if (init ==0) {
@@ -14,6 +10,10 @@ int randomInt(int max){
         init=1;
     }
     return rand()%max;
+}
+
+int rangedRandom(int rangestart, int rangeend){
+    return randomInt(rangestart)+(rangeend-rangestart);
 }
 
 void pwdCreator(char* pwdOut,int length)

@@ -61,7 +61,7 @@ int DLList_Length(DLList list){
     return l;
 }
 
-DLNode* DDList_find(DLList list,int index){
+DLNode* DLList_find(DLList list,int index){
     int l=0;
     DLNode* node =list.head;
     while(node != NULL && l<index){

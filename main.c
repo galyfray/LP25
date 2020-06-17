@@ -25,11 +25,12 @@ int main(int argc, char** argv)
 								{
 									case 1: //fonction generation manuelle de mdp
 										break;
-									case 2: 
+									case 2:{
 										// fonction generation mdp aleatoire
 										char pwd[12];
-										void pwdCreator(pwd,12);
+										pwdCreator(pwd,12);
 										break;
+										}
 									case 3: choix = 0;
 										break;
 									default: break;
