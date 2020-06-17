@@ -1,6 +1,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
+#include "utils.h"
 
 int rangedRandom(int rangestart, int rangeend){
     return randomInt(rangestart)+(rangeend-rangestart);
